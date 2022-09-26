@@ -4,6 +4,7 @@ let btnEnvForm = document.querySelector('#btnEnvForm');
 /* Escucho el evento clik en el boton enviar */
 btnEnvForm.addEventListener('click', (event) => {
     event.preventDefault();
+    console.log('Click en mi boton Enviar');
 
     /**Llamo a esta funcion para hacer una pequeña validacion a mi formulario */
     validarForm();
@@ -11,14 +12,15 @@ btnEnvForm.addEventListener('click', (event) => {
 });
 
 function validarForm() {
+    console.log('Validando mi formulario');
     //Capturando todos los campos del formulario
     let nombre = document.querySelector('#nombre').value;
     let cedula = document.querySelector('#cedula').value;
     let sexo = document.querySelector('#sexo').value;
+    console.log(nombre + ' - ' + cedula + ' - ' + sexo);
 
-    console.log(nombre, cedula, sexo);
     //Validando que los campos no esten vacios
-    if (cedula.lenght = '' || nombre.lenght <= 0 || sexo == '') {
+    if (cedula.length == '' || nombre.length <= 0 || sexo == '') {
 
         /*Capturando el id donde se muestra el mensaje */
         let respuesta = document.querySelector("#respuesta");
@@ -38,8 +40,9 @@ function validarForm() {
 
 
 function enviarFormulario() {
+    console.log('Enviando mi formulario.!');
     btnEnvForm.disabled = true; /*Desabilitando el boton Enviar*/
-    btnEnvForm.innerHTML = "Procesando mi Form..."; /*Cambiando el valor del boton*/
+    btnEnvForm.innerHTML = "Enviando mi Form..."; /*Cambiando el valor del boton*/
 
 
     loader(true); /*Mi funcion Pre-loader*/
@@ -47,12 +50,13 @@ function enviarFormulario() {
         loader(false);
 
         btnEnvForm.disabled = false; /*Desabilitando el boton */
-        btnEnvForm.innerHTML = "Procesar"; /*Cambiando el valor del boton*/
+        btnEnvForm.innerHTML = "Enviar Formulario"; /*Cambiando el valor del boton*/
     }, 2000);
 
     return false;
 }
 
+/**funcion para ocultar el mensaje despues de cierto tiempo */
 function ocultarRespuesta() {
     let respuesta = document.querySelector("#respuesta");
     btnEnvForm.disabled = true;
@@ -65,6 +69,7 @@ function ocultarRespuesta() {
         }, 1500);
     }
 }
+
 
 /* Mi funcion Pre-loader */
 var cargando = false;
