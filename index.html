@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- las tres siguientes líneas son  para obtener los elementos de HTML5 que funcionen en versiones de Internet Explorer antiguas -->
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+  <title>Como evitar Reenvío del formulario con JavaScript</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <style>
+    #respuesta {
+      color: crimson;
+      background-color: #28a745;
+      font-weight: 700;
+      padding: 5px 10px;
+      text-align: center;
+    }
+
+    img {
+      width: 300px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-md-12">
+
+        <h1 class="mb-5" style="text-align:center; margin-top:50px; font-weight: 800;font-size: 50px;">
+          🥇 Como evitar Reenvío del formulario con JavaScript😲 👇
+        </h1>
+
+
+        <div class="row justify-content-md-center">
+          <div class="col-md-4">
+            <img class="img-fluid"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png"
+              alt="" srcset="">
+          </div>
+
+          <div class="col-md-7">
+            <p id="respuesta" style="display:none;"> </p>
+
+            <form name="miForm" id="miForm" action="#" method="POST" autocomplete="false">
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre del Empleado</label>
+                <input type="text" name="nombre" id="nombre" value="urian" class="form-control">
+              </div>
+
+              <div class="mb-3">
+                <label for="cedula" class="form-label">Cedula del Empleado</label>
+                <input type="number" name="cedula" id="cedula" class="form-control" maxlength="10">
+              </div>
+
+              <div class="mb-3">
+                <label for="sexo" class="form-label">Sexo Empleado</label>
+                <select name="sexo" id="sexo" class="custom-select">
+                  <option value="" selected style="text-align: center;">Seleccione tu Sexo</option>
+                  <option value="M">Masculino</option>
+                  <option value="F">Femenino</option>
+                  <option value="O">Otro</option>
+                </select>
+              </div>
+              <button type="submit" id="btnEnvForm" class="btn btn-success btn-block">Enviar Formulario</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+<script src="miJS.js"></script>
+</body>
+</html>
