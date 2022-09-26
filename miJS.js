@@ -2,14 +2,7 @@
 let btnEnvForm = document.querySelector('#btnEnvForm');
 
 /* Escucho el evento clik en el boton enviar */
-btnEnvForm.addEventListener('click', (event) => {
-    event.preventDefault();
-    console.log('Click en mi boton Enviar');
-
-    /**Llamo a esta funcion para hacer una pequeña validacion a mi formulario */
-    validarForm();
-
-});
+btnEnvForm.addEventListener('click', validarForm);
 
 function validarForm() {
     console.log('Validando mi formulario');
