@@ -67,7 +67,6 @@ function ocultarRespuesta() {
 /* Mi funcion Pre-loader */
 var cargando = false;
 function loader(cargando) {
-    let body = document.body;
     if (cargando) {
         let body = document.body;
         body.style.opacity = "0.1";
