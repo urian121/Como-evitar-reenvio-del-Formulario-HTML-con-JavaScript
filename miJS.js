@@ -76,6 +76,8 @@ function loader(cargando) {
         body.style.right = "0";
         body.style.top = "0";
         body.style.zIndex = "99999999999999999999";
+        body.style.overflow = "hidden"; // Deshabilitar desplazamiento
+        body.style.pointerEvents = "none"; //Deshabilitar eventos
     } else {
         body.style.opacity = "10";
     }
