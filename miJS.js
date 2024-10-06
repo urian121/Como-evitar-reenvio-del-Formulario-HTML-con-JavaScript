@@ -56,8 +56,6 @@ function enviarFormulario(data) {
     respuesta.style.display = "block";
     respuesta.style.color = "#fff";
     respuesta.innerHTML = JSON.stringify(data, null, 2);
-
-    document.querySelector("#miForm").reset();    
 }
 
 /**funcion para ocultar el mensaje despues de cierto tiempo */
